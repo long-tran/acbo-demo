@@ -1,7 +1,9 @@
+# This is for load test https://artillery.io/docs/getting-started/
+# artillery run loans.art.yml
 config:
-  target: 'https://artillery.io'
+  target: 'http://localhost:8080'
   phases:
-    - duration: 60
+    - duration: 10
       arrivalRate: 20
   defaults:
     headers:
@@ -9,4 +11,4 @@ config:
 scenarios:
   - flow:
     - get:
-        url: "/docs"
+        url: "/api/loans/38917281"
